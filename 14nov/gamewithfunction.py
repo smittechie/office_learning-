@@ -37,7 +37,7 @@ def dec_villian_life(life):
 #------------------------------------Superheros------------------------------------------
 def get_all_superheros():
     IRONMAN = {"name" : "Ironman", "attack_power" :  250, "life" : 1000}
-    BLACKWIDOW = {"name" : "Blackwidow", "attack_power" : 250, ("%s" %"life"): 1000}
+    BLACKWIDOW = {"name" : "Blackwidow", "attack_power" : 250, "life": 1000}
     SPIDERMAN = {"name" : "Spiderman", "attack_power" : 250, "life" : 1000}
     HULK = {"name" : "Hulk", "attack_power" : 250, "life" : 1000}
     Superheros = [IRONMAN,BLACKWIDOW,SPIDERMAN,HULK]
@@ -73,7 +73,7 @@ def attack():
         villian_index = randint(0, 2)
 
         # helper varialble
-        superhero =get_superhero(hero_index)
+        superhero = get_superhero(hero_index)
         supervillian = get_supervillian(villian_index)
 
         if superhero and supervillian:
