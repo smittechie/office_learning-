@@ -7,33 +7,35 @@ import json
 people_data = {"Trootech":[{
   "emp_name": "Deep_pathak",
   "emp_number" : "12345",
-  "emp_joining_time":'2021:07:08 09:31:22 PDT 0700'
+  "emp_joining_time":'2022:11:16 23:15:54 EST -0500'
   },
 {
   "emp_name": "Smit_kumar_patel",
   "emp_number":"54321",
-  "emp_joining_time":'2021:07:08 09:00:42 EDT 0400'
+  "emp_joining_time":'2022:11:16 22:16:48 CST -0600'
   }]}
 
 
 
 fmt="%Y:%m:%d %H:%M:%S %Z %z"
 
-user_input = input("Select the employee \n"
-      "a = Deep_pathak\n"
-      "b = Smit_kumar_patel :")
+# user_input = input("Select the employee \n"
+#       "a = Deep_pathak\n"
+#       "b = Smit_kumar_patel :")
 
-if user_input == "a":
-  a_obj= people_data["Trootech"][0]['emp_joining_time']
-elif user_input == "b":
-  b_obj = people_data["Trootech"][1]['emp_joining_time']
 
-print(a_obj)
+
+# if user_input == "a":
+#   a_obj= people_data["Trootech"][0]['emp_joining_time']
+# elif user_input == "b":
+#   b_obj = people_data["Trootech"][1]['emp_joining_time']
+#
+# print(a_obj)
 
 # print("Enter the timezone you want to see the output :\n"
 #       "local")
-date = datetime.strptime(a_obj, fmt)
-print(date)
+# date = datetime.strptime(a_obj, fmt)
+# print(date)
 
 # time = input("Enter  time in :->>  Hour:Minutes:Seconds :")
 # time_object =datetime.strptime(time,"%H:%M:%S")             #convert string to date time object
