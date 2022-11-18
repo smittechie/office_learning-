@@ -1,5 +1,4 @@
 import random
-from random import choice
 
 animal_list=["tiger","dolphin","eagle"]
 activties =["swim","fly","run","jump"]
@@ -32,8 +31,3 @@ if count >= 20:
     print("pass")
 else:
     print("fail")
-
-
-
-
-
