@@ -17,3 +17,4 @@ n = 3
 for x in range(n):
     s.append(lst[x::n])
     print(s)
+
