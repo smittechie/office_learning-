@@ -15,12 +15,10 @@ def summ(lst):
 
         else:
             print(f"{j}:wrong data type")
-#summ(lst)
 
 def length(lst):
     for j in lst:
         print(f"lenth of {j} is ",len(str(j)))
-#length(lst)
 
 
 def averagee(lst):
@@ -34,7 +32,23 @@ def averagee(lst):
             print(f"The average  of {j} is : ", sum1/lengthh)
         else:
             print(f"{j}:wrong data type")
-averagee(lst)
 
 
 def custom(lst):
+    for i in lst:
+        if type(i) == str:
+            answer= i == i[::-1]
+            print(f"the string is: {answer} : a Palindrome ")
+        else:
+            print("Invalid datatype")
+
+
+
+if __name__ == "__main__":
+    custom(lst)
+    averagee(lst)
+    length(lst)
+    summ(lst)
+
+
+

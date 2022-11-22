@@ -1,4 +1,4 @@
-from datetime import datetime , timezone,timedelta
+from datetime import datetime
 import pytz
 import json
 
@@ -7,35 +7,70 @@ import json
 people_data = {"Trootech":[{
   "emp_name": "Deep_pathak",
   "emp_number" : "12345",
-  "emp_joining_time":'2022:11:16 23:15:54 EST -0500'
+  "emp_joining_time":'2022:11:16 23:15:54'                # EST -0500
   },
 {
   "emp_name": "Smit_kumar_patel",
   "emp_number":"54321",
-  "emp_joining_time":'2022:11:16 22:16:48 CST -0600'
+  "emp_joining_time":'2022:11:16 22:16:48'              # CST -0600
   }]}
 
 
 
-fmt="%Y:%m:%d %H:%M:%S %Z %z"
+fmt="%Y:%m:%d %H:%M:%S"                                   # %Z %z
 
-# user_input = input("Select the employee \n"
-#       "a = Deep_pathak\n"
-#       "b = Smit_kumar_patel :")
+user_input = input("Select the employee \n"
+      "a = Deep_pathak\n"
+      "b = Smit_kumar_patel :")
 
 
 
-# if user_input == "a":
-#   a_obj= people_data["Trootech"][0]['emp_joining_time']
-# elif user_input == "b":
-#   b_obj = people_data["Trootech"][1]['emp_joining_time']
-#
-# print(a_obj)
+def retrive_time(obj):
+    if user_input == "a":
+      a_obj= people_data["Trootech"][0]['emp_joining_time']
+      return a_obj
+    elif user_input == "b":
+      b_obj = people_data["Trootech"][1]['emp_joining_time']
+      print(b_obj)
+      return b_obj
 
-# print("Enter the timezone you want to see the output :\n"
-#       "local")
-# date = datetime.strptime(a_obj, fmt)
-# print(date)
+
+def time_parsed(time_from_data):
+    date = datetime.strptime(time_from_data, fmt)
+    print("Time after data retrived and parsed :",date)
+    return date
+def convert_timezone(parsed_time):
+    user_input_timezone = input("Enter the timezone you want the time in\n"
+                                "US/Central\n"
+                                "Asia/Seoul\n"
+                                "Europe/London\n"
+                                "Europe/Oslo :->")
+    #current local time
+    naive = datetime.now()
+    print("current local time of system  : ", naive)
+
+    #time retrived by the data
+    us_local =pytz.timezone(f'{user_input_timezone}')
+    print(f"{user_input_timezone} local time   :",datetime.now(us_local))
+
+    # converting time
+    us_local = parsed_time.astimezone(pytz.timezone(f'{user_input_timezone}'))
+    print("After comparing time from\ndata "
+          f"with {user_input_timezone} local time ", us_local)
+
+
+
+if __name__ == "__main__":
+    time_from_data= retrive_time(user_input)
+    parsed_time =time_parsed(time_from_data)
+    convert_timezone(parsed_time)
+
+
+
+
+
+
+
 
 # time = input("Enter  time in :->>  Hour:Minutes:Seconds :")
 # time_object =datetime.strptime(time,"%H:%M:%S")             #convert string to date time object
@@ -71,6 +106,18 @@ c=people_data["Trootech"][0]['emp_name']
 
 
 
+print(50*"--")
+# converting different timezones
+
+# local = datetime.now(pytz.utc)
+# print("local DateTime:", local.strftime("%Y:%m:%d %H:%M:%S %Z %z"))
+#
+# us_local = local.astimezone(pytz.timezone('US/Central'))
+# print("US Central DateTime:",us_local.strftime("%Y:%m:%d %H:%M:%S %Z %z"))
+#
+# now_tokyo= datetime.now(pytz.timezone("Asia/Tokyo"))
+# print("tokyo Date time::",now_tokyo)
+
 
 
 
@@ -94,18 +141,7 @@ c=people_data["Trootech"][0]['emp_name']
 # print("daylight  standard tiem :",soeul.dst())
 #
 #
-print(50*"--")
-# converting different timezones
 
-local = datetime.now(pytz.utc)
-print("local DateTime:", local.strftime("%Y:%m:%d %H:%M:%S %Z %z"))
-
-us_local = local.astimezone(pytz.timezone('US/Central'))
-print("US Central DateTime:",us_local.strftime("%Y:%m:%d %H:%M:%S %Z %z"))
-
-now_usa= datetime.now(pytz.timezone('US/Central'))
-print("us time::",now_usa)
-#
 
 
 #
