@@ -1,0 +1,10 @@
+
+{"name": "Bob",
+"languages": ["English", "French"]
+}
+
+
+{"criteria": [
+  {"locationParam": "[ALL:03232434]” },
+  {“variableParam”: ",[00060, 00065]” }
+]}
