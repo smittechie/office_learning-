@@ -6,7 +6,7 @@ test_dic = [
 
 def fun1(test_dic,list_of_keys):
         for i in test_dic:
-                print([i[list_of_keys[0]],i[list_of_keys[1]]])
+                print([i[list_of_keys[1]],i[list_of_keys[0]]])
 
 
 fun1(test_dic,["name", "student_id"])

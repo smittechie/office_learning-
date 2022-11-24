@@ -9,10 +9,15 @@ list_1 = [[1, 3], [4, 5], [5, 6], [-11, 0]]
 list_2 = [[11, 9], [16, 2], [4, 10], [12, -23]]
 
 lst3=[]
-for i in list_1:
-    for j in list_2:
-        lst3.append(i+j)
-        list_2.pop(0)
-        break
-print(lst3)
+
+'''method 1'''
+# for i in list_1:
+#     for j in list_2:
+#         lst3.append(i+j)
+#         list_2.pop(0)
+#         break
+# print(lst3)
+
+
+
 
