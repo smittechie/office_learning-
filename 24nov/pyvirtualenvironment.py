@@ -1,9 +1,11 @@
-""""
+"""
 
 sudo apt update                            #second step 
 
 sudo apt install python                    #install python 
 sudo apt install python3-pip                 #second method step
+
+$ python -m pip install Django          # install django
 
 #command for installing venv package 
 pip install virtualenv                      #secnd method 
@@ -50,4 +52,5 @@ $ django-admin startproject mysite
 
 
 
-""""
+"""
+print(10)

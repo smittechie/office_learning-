@@ -37,6 +37,7 @@ print("--"*50)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '''''Example 2 '''''
 print("class method and static method")
+
 class Student:
 
     school ="Trootech"

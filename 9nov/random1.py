@@ -1,6 +1,6 @@
 
 '''''import random
-There are various functions associated with the random module are:
+There are various functions.py associated with the random module are:
 
 random()
 randrange()
