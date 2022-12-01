@@ -3,7 +3,7 @@
 
 from abc import ABC, abstractmethod
 
-class Polygon:
+class Polygon(ABC):
 
     def noofsides(self):
         a = 57
