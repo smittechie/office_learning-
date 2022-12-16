@@ -12,7 +12,7 @@ people_data = {"Trootech":[{
 {
   "emp_name": "Smit_kumar_patel",
   "emp_number":"54321",
-  "emp_joining_time":'2022:11:16 22:16:48'              # CST -0600
+  "emp_joining_time":'2022:11:16 01:22:00'              # CST -0600
   }]}
 
 
@@ -44,6 +44,7 @@ def convert_timezone(parsed_time):
                                 "US/Central\n"
                                 "Asia/Seoul\n"
                                 "Europe/London\n"
+                                "UTC\n"
                                 "Europe/Oslo :->")
     #current local time
     naive = datetime.now()
