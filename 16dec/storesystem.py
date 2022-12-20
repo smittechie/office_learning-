@@ -32,7 +32,7 @@ store_start_time_f =store_start_time.strftime("%H:%M")
 store_close_time_f =store_close_time.strftime("%H:%M")
 
 
-print("---------------Welocme to my store---------------- \n")
+print("---------------Welcome to my store---------------- \n")
 
 def fun3():
     while True:
@@ -79,6 +79,6 @@ while a >count:
     updated = datetime.strptime(updated, fmt)
     updated = updated + timedelta(minutes=(total_min))
     updated = updated.strftime("%H:%M")
-    print("raminaing slots are from ",old_time,"to ",updated)
+    print("remaining slots are from ",old_time,"to ",updated)
     count +=1
 
