@@ -1,0 +1,12 @@
+{
+  "name": "smit",
+  "score": 21,
+  "isadmin": true,
+  "licence": null ,
+  "ShopItems": ["food","cloths","sunflower-oil"],
+  "muobj": {
+    "name": "nested",
+    "marks": 45,
+    "ShopItems2": ["food","cloths",{"muobj":2}]
+  }
+}
